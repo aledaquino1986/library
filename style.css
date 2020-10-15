@@ -13,9 +13,7 @@ body {
   font-family: Poppins, sans-serif, Arial, Helvetica;
   background-color: #cde8f8;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  
+
 }
 
 main {
@@ -145,7 +143,7 @@ button:active {
   
 
   @media only screen and (min-width: 1000px) {
-    main {
+    .grid-main {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "button library";

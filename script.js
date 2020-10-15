@@ -210,7 +210,7 @@ const createForm = function(addBookToLibraryButton) {
   addNewBookTitle.innerText = "Add a book to your library!";
   addNewBookSection.appendChild(addNewBookTitle);
   addNewBookSection.insertBefore(addNewBookTitle, form);
-
+  
   createAddBookForm(form);
   form.appendChild(addBookToLibraryButton);
 }
@@ -236,6 +236,7 @@ addNewBookButton.addEventListener("click", (e) => {
     let authorInput = document.querySelector("#author").value;
     let pagesInput = document.querySelector("#pages").value;
     let readInput = document.querySelector("#have-you-read-it").value;
+    const main = document.querySelector("main");
 
     
     if (!titleInput) {
@@ -260,6 +261,8 @@ addNewBookButton.addEventListener("click", (e) => {
       generateTable(library);
       deleteFromLibrary(library);
       addNumBook();
+      main.classList.add("grid-main");
+
 
       const deleteBookButton = document.querySelectorAll(".delete-book");
      
@@ -276,6 +279,7 @@ addNewBookButton.addEventListener("click", (e) => {
             
             tbody.remove();
             thead.remove();
+            main.classList.remove("grid-main");
            }
         });
 
