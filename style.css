@@ -1,0 +1,158 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: Poppins, sans-serif, Arial, Helvetica;
+  background-color: #cde8f8;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  
+}
+
+main {
+  margin-bottom: 2rem;
+  
+}
+
+.add-new-book-section {
+  grid-area: button;
+  transition: 1s;
+}
+
+.your-library {
+  grid-area: library;
+  transition: all 2s ease;
+  
+}
+
+.invisible {
+  display:none
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+  background-color: #312e2e;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  transition: 1s;
+}
+
+
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table tbody tr:nth-of-type(odd) {
+  background-color: rgb(135, 172, 148);
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+button {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(255, 254, 254, 0.4);
+  background: #262c37;
+  transition: 0.5s;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 5px;
+}
+.add-book-to-library {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+button:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+button:active {
+
+  transform: translate(0, 0.3rem);
+  
+  }
+
+  .add-new-book {
+   
+    padding: 20px;
+    font-size: 2rem;
+  }
+
+  input, select{
+    border-radius: 5px;
+    padding: 0.3rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+
+  select {
+    text-align-last: center;
+    text-align: center;
+  }
+  
+
+  @media only screen and (min-width: 1000px) {
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "button library";
+      
+    }
+
+    .your-library {
+      margin-right: 2rem;
+    }
+    
+  }
