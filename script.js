@@ -169,7 +169,7 @@ const createAddBookForm = function (form) {
       case 2:
         labelTitle.innerText = "Add number of pages:";
 
-        setAttribute(input, "type", "text");
+        setAttribute(input, "type", "number");
         setAttribute(input, "placeholder", "359");
         setAttribute(input, "id", "pages");
         setAttribute(input, "min", "1");
