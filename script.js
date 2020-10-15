@@ -217,6 +217,11 @@ const createForm = function(addBookToLibraryButton) {
 
 
 
+const removeTable = function(tbody) {
+ console.log(tbody);
+}
+
+
 
 addNewBookButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -257,15 +262,31 @@ addNewBookButton.addEventListener("click", (e) => {
       addNumBook();
 
       const deleteBookButton = document.querySelectorAll(".delete-book");
-
+     
+      
       deleteBookButton.forEach((button) => {
+      
         button.addEventListener("click", function (e) {
+         
           const buttonParentElement = button.parentElement.parentElement;
           buttonParentElement.remove();
+          const tbody = document.querySelector("tbody");
+          const thead = document.querySelector("thead")
+          if (tbody && tbody.children.length == 0) {
+            
+            tbody.remove();
+            thead.remove();
+           }
         });
+
+       
       });
+
+      
     }
   });
 
   addNewBookButton.classList.add("invisible");
 });
+
+
