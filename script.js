@@ -240,7 +240,7 @@ addNewBookButton.addEventListener("click", (e) => {
 
     
     if (!titleInput) {
-       alert("Please, do not leave any form inputs empty.")
+       alert("Please, do not leave any blank inputs.")
     } else {
       const userBook = new Book(titleInput, authorInput, pagesInput, readInput);
 
